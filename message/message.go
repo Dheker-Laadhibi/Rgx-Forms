@@ -17,3 +17,19 @@ type Message struct{
 	Content string
 	Errors map[string]string
 }
+func (msg *Message) validate()bool{
+	//initializing a map named Errors
+msg.Errors=make( map[string]string)
+//if the email match the regular expressions
+match:=rxEmail.Match([]byte(msg.Email))
+if match ==false{
+	msg.Errors["email"]="please entre a valid email adress "
+}
+// strings.TrimSpace to remove leading and trailing whitespaces from a string.
+if strings.TrimSpace(msg.Content)==""{
+	msg.Errors["content"]="please enter a message "
+
+}
+return len(msg.Errors)==0
+
+}
