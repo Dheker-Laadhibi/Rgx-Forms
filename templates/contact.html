@@ -15,16 +15,20 @@
 
 <div>
     <!--display errors mail -->
-    <p class="error"></p>
+    {{with .Errors.Email}}
+    <p class="error">{{.}}</p>
+    {{end}}
     <p><label >Your mail </label></p>
-    <p><input type="email" name="email" value=""></p>
+    <p><input type="email" name="email" value="{{.Email}}"></p>
 </div>
 
 <div>
     <!--display errors content -->
-    <p class="error"></p>
+    {{with .Errors.Content}}
+    <p class="error">{{.}}</p>
+    {{end}}
     <p><label >Your Message</label></p>
-    <p><textarea name="content"  cols="30" rows="10"></textarea></p>
+    <p><textarea name="content" >{{.Content}}</textarea></p>
 </div>
 
 

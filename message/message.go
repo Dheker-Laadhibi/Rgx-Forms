@@ -17,7 +17,7 @@ type Message struct{
 	Content string
 	Errors map[string]string
 }
-func (msg *Message) validate()bool{
+func (msg *Message) Validate()bool{
 	//initializing a map named Errors
 msg.Errors=make( map[string]string)
 //if the email match the regular expressions
