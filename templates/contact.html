@@ -10,6 +10,32 @@
     
     <div>
         <h1>Contact</h1>
+        <!--whe the client submit the request will be executed on /contact-->
+        <form action="/contact" method="POST">
+
+<div>
+    <!--display errors mail -->
+    <p class="error"></p>
+    <p><label >Your mail </label></p>
+    <p><input type="email" name="email" value=""></p>
+</div>
+
+<div>
+    <!--display errors content -->
+    <p class="error"></p>
+    <p><label >Your Message</label></p>
+    <p><textarea name="content"  cols="30" rows="10"></textarea></p>
+</div>
+
+
+<div>
+    <input type="submit" value="Send message">
+</div>
+
+
+
+
+        </form>
     </div>
 </body>
 </html>
